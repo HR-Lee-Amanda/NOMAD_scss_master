@@ -1,4 +1,4 @@
-.wrapper {
+.mother {
     display: flex;
     /* flex-direction: column; */
     /* main axis -> justify-content */
@@ -13,7 +13,7 @@
     font-size:50px;
 }
 
-.box {
+.child {
     display: flex;
     /*flex-basis:...px -> element 처음 크기 지정, main axis 기준 */
     flex-basis:200px;
@@ -26,17 +26,18 @@
 
 }
 
-.box:nth-child(2) {
+.child:nth-child(2) {
   /*align-self: center; 이건 자식만 사용*/
   background:black;
   /* flex-shirink -> 화면 크기가 줄어들 때 얼마나 크기를 줄일 지
                   -> 디폴트 : 1 (2면 다른 것보다 두 배 줄어듬) */
   /*flex-shrink: 3;*/
   /* flex-grow : 0 (디폴트) 빈 공간을 어떻게 채울 것인지 */
+  /*order: 0 // 0이 디폴트, 커지면 뒤로감 */
   flex-grow:2;
 }
 
-.box:nth-child(3) {
+.child:nth-child(3) {
   /*align-self: center;*/
   /*flex-shirink -> 화면 크기가 줄어들 때 얼마나 크기를 줄일 지
                   -> 디폴트 : 1 (2면 다른 것보다 두 배 줄어듬)*/
